@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مصمّم دعوات الزفاف الفاخر | Premium Wedding Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@200;300;400;500;700;800&family=Reem+Kufi:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:wght@400;700;900&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ════════════════════════════════════════
+   PREMIUM DESIGN SYSTEM
+════════════════════════════════════════ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1428 100%);
+  color: #e8e8e8;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ANIMATED BACKGROUND */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(197, 160, 89, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(100, 200, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  gap: 0;
+}
+
+/* ════════════════════════════════════════
+   LEFT PANEL - TOOLS & EDITOR
+════════════════════════════════════════ */
+.tools-panel {
+  width: 35%;
+  height: 100vh;
+  background: rgba(10, 14, 39, 0.7);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(197, 160, 89, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(197, 160, 89, 0.5) transparent;
+}
+
+.tools-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tools-panel::-webkit-scrollbar-thumb {
+  background: rgba(197, 160, 89, 0.5);
+  border-radius: 3px;
+}
+
+.tools-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 89, 0.8);
+}
+
+/* PANEL HEADER */
+.panel-header {
+  margin-bottom: 28px;
+  animation: slideDown 0.6s ease;
+}
+
+.panel-title {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #C5A059 0%, #e8c97a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.panel-subtitle {
+  font-size: 12px;
+  color: rgba(232, 232, 232, 0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 24px;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.section:nth-child(2) { animation-delay: 0.1s; }
+.section:nth-child(3) { animation-delay: 0.2s; }
+.section:nth-child(4) { animation-delay: 0.3s; }
+.section:nth-child(5) { animation-delay: 0.4s; }
+.section:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTION LABEL */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #C5A059;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+/* INPUT GROUP */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.input-group label {
+  font-size: 11px;
+  color: rgba(232, 232, 232, 0.7);
+  font-weight: 600;
+}
+
+.input-field {
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  border-radius: 10px;
+  color: #e8e8e8;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 13px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.input-field:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(197, 160, 89, 0.35);
+}
+
+.input-field:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #C5A059;
+  box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+}
+
+/* COLOR PICKER */
+.color-picker-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.color-input {
+  width: 50px;
+  height: 42px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(197, 160, 89, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.color-input:hover {
+  border-color: #C5A059;
+}
+
+/* TEMPLATE GRID */
+.template-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.template-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid rgba(197, 160, 89, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 80px;
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.1) 0%, rgba(100, 200, 255, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.template-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.template-card:hover {
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.2) 0%, rgba(100, 200, 255, 0.1) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.15);
+}
+
+.template-card.active {
+  border-color: #C5A059;
+  box-shadow: 0 0 24px rgba(197, 160, 89, 0.4), inset 0 0 24px rgba(197, 160, 89, 0.1);
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.3) 0%, rgba(100, 200, 255, 0.15) 100%);
+}
+
+.template-card:active {
+  transform: translateY(0);
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #C5A059 0%, #e8c97a 100%);
+  color: #1a1408;
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(197, 160, 89, 0.5);
+}
+
+.btn-secondary {
+  background: rgba(197, 160, 89, 0.1);
+  color: #C5A059;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(197, 160, 89, 0.2);
+  border-color: #C5A059;
+}
+
+/* ════════════════════════════════════════
+   RIGHT PANEL - PREVIEW
+════════════════════════════════════════ */
+.preview-panel {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  overflow-y: auto;
+  background: rgba(15, 20, 40, 0.3);
+}
+
+/* PHONE MOCKUP */
+.phone-mockup {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 9 / 16;
+  background: #f5f5f5;
+  border-radius: 40px;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    0 0 0 12px #1a1f3a,
+    0 0 0 13px rgba(197, 160, 89, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: phoneFloat 6s ease-in-out infinite;
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0) rotateZ(-0.5deg); }
+  50% { transform: translateY(-15px) rotateZ(0.5deg); }
+}
+
+.phone-notch {
+  height: 28px;
+  background: #1a1a1a;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.notch-pill {
+  width: 150px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+.phone-screen {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #f5f5f5;
+  scrollbar-width: none;
+}
+
+.phone-screen::-webkit-scrollbar {
+  display: none;
+}
+
+.phone-home {
+  height: 24px;
+  background: #f5f5f5;
+}
+
+/* INVITATION STYLES */
+.invitation {
+  min-height: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: invFadeIn 0.8s ease-out;
+}
+
+@keyframes invFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* TEMPLATE 1 - CLASSIC ELEGANCE */
+.template-1 {
+  background: linear-gradient(135deg, #f8f4f0 0%, #ede8e0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.template-1::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+  animation: orbitSlow 20s linear infinite;
+}
+
+@keyframes orbitSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.inv-1-content {
+  position: relative;
+  z-index: 2;
+}
+
+.inv-1-header {
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a6830;
+  margin-bottom: 16px;
+  animation: slideInDown 0.6s ease 0.1s both;
+}
+
+.inv-1-ornament {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #C5A059, transparent);
+  margin: 0 auto 16px;
+  animation: slideInUp 0.6s ease 0.2s both;
+}
+
+.inv-1-names {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #2A2010;
+  margin: 20px 0;
+  animation: slideInDown 0.6s ease 0.3s both;
+}
+
+.inv-1-amp {
+  font-size: 32px;
+  color: #C5A059;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  margin: 12px 0;
+  animation: zoomIn 0.6s ease 0.4s both;
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.inv-1-details {
+  font-size: 12px;
+  color: #5A4E38;
+  line-height: 1.8;
+  margin-top: 20px;
+  animation: slideInUp 0.6s ease 0.5s both;
+}
+
+/* TEMPLATE 2 - MODERN MINIMAL */
+.template-2 {
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+  position: relative;
+}
+
+.template-2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #C5A059, #e8c97a, #C5A059);
+  animation: slideRight 1.5s ease-in-out infinite;
+}
+
+@keyframes slideRight {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+.inv-2-header {
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #C5A059;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.inv-2-names {
+  font-size: 26px;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 18px 0;
+}
+
+.inv-2-line {
+  width: 80%;
+  height: 1px;
+  background: #C5A059;
+  margin: 18px auto;
+}
+
+.inv-2-details {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.9;
+  margin-top: 16px;
+}
+
+/* TEMPLATE 3 - ROMANTIC */
+.template-3 {
+  background: linear-gradient(135deg, #faf5f0 0%, #f5e6d3 50%, #ebe0ce 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.template-3::before {
+  content: '✨';
+  position: absolute;
+  font-size: 100px;
+  opacity: 0.05;
+  top: -20px;
+  right: -20px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.template-3::after {
+  content: '💝';
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.05;
+  bottom: -10px;
+  left: -10px;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.inv-3-header {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: #8a6830;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.inv-3-names {
+  font-size: 24px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #6b5a3d;
+  margin: 16px 0;
+}
+
+.inv-3-amp {
+  font-size: 28px;
+  color: #C5A059;
+  font-style: italic;
+  margin: 12px 0;
+}
+
+.inv-3-detail-box {
+  background: rgba(197, 160, 89, 0.1);
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 14px;
+  font-size: 12px;
+  color: #5A4E38;
+  line-height: 1.8;
+}
+
+/* TEMPLATE 4 - LUXURY DARK */
+.template-4 {
+  background: linear-gradient(135deg, #1a1410 0%, #2a2415 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.template-4::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(197, 160, 89, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(100, 200, 255, 0.08) 0%, transparent 40%);
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.inv-4-header {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C5A059;
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+
+.inv-4-names {
+  font-size: 26px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #f5f1e8;
+  margin: 18px 0;
+}
+
+.inv-4-amp {
+  font-size: 32px;
+  color: #C5A059;
+  font-style: italic;
+  margin: 12px 0;
+}
+
+.inv-4-divider {
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #C5A059, transparent);
+  margin: 16px auto;
+}
+
+.inv-4-details {
+  font-size: 12px;
+  color: rgba(245, 241, 232, 0.85);
+  line-height: 1.9;
+  margin-top: 16px;
+}
+
+/* TEMPLATE 5 - GOOGLE INSPIRED */
+.template-5 {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.template-5::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(to bottom, #4285f4, #ea4335, #fbbc04, #34a853);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: expandWidth 2s ease-in-out infinite;
+}
+
+@keyframes expandWidth {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.inv-5-header {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #4285f4;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.inv-5-names {
+  font-size: 24px;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500;
+  color: #202124;
+  margin: 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.inv-5-separator {
+  height: 1px;
+  background: linear-gradient(to right, #4285f4, #ea4335, #fbbc04, #34a853);
+  margin: 14px 0;
+}
+
+.inv-5-details {
+  font-size: 12px;
+  color: #5f6368;
+  line-height: 1.8;
+  margin-top: 14px;
+}
+
+/* TOAST NOTIFICATION */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: linear-gradient(135deg, #C5A059 0%, #e8c97a 100%);
+  color: #1a1408;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 5000;
+  opacity: 0;
+  transform: translateY(150%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.4);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .tools-panel { width: 40%; }
+  .phone-mockup { max-width: 320px; }
+}
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .tools-panel { width: 100%; height: 50vh; max-height: 50vh; }
+  .preview-panel { height: 50vh; }
+  .phone-mockup { max-width: 280px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- LEFT PANEL - TOOLS -->
+  <div class="tools-panel">
+    <div class="panel-header">
+      <div class="panel-title">✨ الدعوة</div>
+      <div class="panel-subtitle">مصمّم دعوات الزفاف الفاخر</div>
+    </div>
+
+    <!-- TEMPLATE SELECTION -->
+    <div class="section">
+      <div class="section-label">🎨 اختر التصميم</div>
+      <div class="template-grid">
+        <div class="template-card active" onclick="selectTemplate(1, this)">👑</div>
+        <div class="template-card" onclick="selectTemplate(2, this)">✨</div>
+        <div class="template-card" onclick="selectTemplate(3, this)">💝</div>
+        <div class="template-card" onclick="selectTemplate(4, this)">🌙</div>
+        <div class="template-card" onclick="selectTemplate(5, this)">🎯</div>
+      </div>
+    </div>
+
+    <!-- NAMES SECTION -->
+    <div class="section">
+      <div class="section-label">👰‍♀️ الأسماء</div>
+      <div class="input-group">
+        <label>👨 اسم العريس</label>
+        <input type="text" class="input-field" id="groomName" placeholder="أحمد محمد" oninput="updatePreview()">
+      </div>
+      <div class="input-group">
+        <label>👰 اسم العروس</label>
+        <input type="text" class="input-field" id="brideName" placeholder="فاطمة أحمد" oninput="updatePreview()">
+      </div>
+    </div>
+
+    <!-- EVENT DETAILS -->
+    <div class="section">
+      <div class="section-label">📅 تفاصيل الفرح</div>
+      <div class="input-group">
+        <label>التاريخ</label>
+        <input type="date" class="input-field" id="weddingDate" oninput="updatePreview()">
+      </div>
+      <div class="input-group">
+        <label>الوقت</label>
+        <input type="time" class="input-field" id="weddingTime" oninput="updatePreview()">
+      </div>
+    </div>
+
+    <!-- VENUE SECTION -->
+    <div class="section">
+      <div class="section-label">📍 المكان</div>
+      <div class="input-group">
+        <label>اسم الصالة / المكان</label>
+        <input type="text" class="input-field" id="venueName" placeholder="صالة الأحلام الفاخرة" oninput="updatePreview()">
+      </div>
+      <div class="input-group">
+        <label>العنوان</label>
+        <input type="text" class="input-field" id="venueAddress" placeholder="الجيزة - مصر" oninput="updatePreview()">
+      </div>
+    </div>
+
+    <!-- COLORS SECTION -->
+    <div class="section">
+      <div class="section-label">🎨 الألوان</div>
+      <div class="input-group">
+        <label>اللون الأساسي</label>
+        <div class="color-picker-group">
+          <input type="color" class="color-input" id="primaryColor" value="#C5A059" oninput="updatePreview()">
+          <span style="flex: 1; font-size: 12px; color: rgba(232, 232, 232, 0.6);">ذهبي فاخر</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>لون النص</label>
+        <div class="color-picker-group">
+          <input type="color" class="color-input" id="textColor" value="#2A2010" oninput="updatePreview()">
+          <span style="flex: 1; font-size: 12px; color: rgba(232, 232, 232, 0.6);">بني داكن</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MUSIC SECTION -->
+    <div class="section">
+      <div class="section-label">🎵 الموسيقى</div>
+      <div class="input-group">
+        <label>رفع ملف صوتي</label>
+        <input type="file" class="input-field" id="musicFile" accept="audio/*" onchange="handleMusicUpload(this.files[0])">
+      </div>
+      <div class="input-group">
+        <label>أو أدخل رابط الموسيقى</label>
+        <input type="url" class="input-field" id="musicUrl" placeholder="https://..." oninput="updateMusicUrl()">
+      </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="section">
+      <button class="btn btn-primary" onclick="downloadInvitation()">💾 حفظ الدعوة</button>
+      <button class="btn btn-secondary" onclick="shareInvitation()" style="margin-top: 12px;">📤 مشاركة</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT PANEL - PREVIEW -->
+  <div class="preview-panel">
+    <div class="phone-mockup">
+      <div class="phone-notch">
+        <div class="notch-pill"></div>
+      </div>
+      <div class="phone-screen">
+        <div class="invitation template-1" id="invitation">
+          <div class="inv-1-content">
+            <div class="inv-1-header">بسم الله الرحمن الرحيم</div>
+            <div class="inv-1-ornament"></div>
+            <div style="text-align: center; font-size: 12px; color: #8a6830; margin-bottom: 12px;">يتشرف بتقديم</div>
+            <div class="inv-1-names" id="displayGroom">أحمد محمد</div>
+            <div class="inv-1-amp">&</div>
+            <div class="inv-1-names" id="displayBride">فاطمة أحمد</div>
+            <div class="inv-1-ornament" style="margin: 16px auto 20px;"></div>
+            <div class="inv-1-details">
+              <div style="margin-bottom: 12px;">🎉 فرح قرانهما الكريم</div>
+              <div style="margin-bottom: 12px;">📅 <span id="displayDate">الثلاثاء ١ يناير ٢٠٢٥</span></div>
+              <div style="margin-bottom: 12px;">⏰ الساعة <span id="displayTime">السابعة مساءً</span></div>
+              <div style="margin-bottom: 12px;">📍 <span id="displayVenue">صالة الأحلام الفاخرة</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-home"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- AUDIO ELEMENT -->
+<audio id="audioPlayer" style="display: none;"></audio>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ════════════════════════════════════════
+// STATE MANAGEMENT
+// ════════════════════════════════════════
+const STATE = {
+  template: 1,
+  groomName: 'أحمد محمد',
+  brideName: 'فاطمة أحمد',
+  weddingDate: '',
+  weddingTime: '',
+  venueName: 'صالة الأحلام الفاخرة',
+  venueAddress: 'الجيزة - مصر',
+  primaryColor: '#C5A059',
+  textColor: '#2A2010',
+  musicSrc: null
+};
+
+// ════════════════════════════════════════
+// TEMPLATE SELECTION
+// ════════════════════════════════════════
+function selectTemplate(num, element) {
+  STATE.template = num;
+  
+  document.querySelectorAll('.template-card').forEach(card => {
+    card.classList.remove('active');
+  });
+  element.classList.add('active');
+  
+  const inv = document.getElementById('invitation');
+  inv.className = `invitation template-${num}`;
+  
+  // Change content based on template
+  updateInvitationContent();
+  showToast(`✨ تم تحديث التصميم`);
+}
+
+// ════════════════════════════════════════
+// UPDATE PREVIEW
+// ════════════════════════════════════════
+function updatePreview() {
+  STATE.groomName = document.getElementById('groomName').value || 'أحمد محمد';
+  STATE.brideName = document.getElementById('brideName').value || 'فاطمة أحمد';
+  STATE.weddingDate = document.getElementById('weddingDate').value;
+  STATE.weddingTime = document.getElementById('weddingTime').value;
+  STATE.venueName = document.getElementById('venueName').value || 'صالة الأحلام الفاخرة';
+  STATE.venueAddress = document.getElementById('venueAddress').value || 'الجيزة - مصر';
+  STATE.primaryColor = document.getElementById('primaryColor').value;
+  STATE.textColor = document.getElementById('textColor').value;
+  
+  updateInvitationContent();
+  saveToLocalStorage();
+}
+
+// ════════════════════════════════════════
+// UPDATE INVITATION CONTENT
+// ════════════════════════════════════════
+function updateInvitationContent() {
+  document.getElementById('displayGroom').textContent = STATE.groomName;
+  document.getElementById('displayBride').textContent = STATE.brideName;
+  document.getElementById('displayDate').textContent = formatArabicDate(STATE.weddingDate);
+  document.getElementById('displayTime').textContent = formatArabicTime(STATE.weddingTime);
+  document.getElementById('displayVenue').textContent = STATE.venueName;
+  
+  // Apply colors
+  const inv = document.getElementById('invitation');
+  inv.style.setProperty('--primary-color', STATE.primaryColor);
+  inv.style.setProperty('--text-color', STATE.textColor);
+}
+
+// ════════════════════════════════════════
+// DATE & TIME FORMATTING
+// ════════════════════════════════════════
+function formatArabicDate(dateStr) {
+  if (!dateStr) return 'الثلاثاء ١ يناير ٢٠٢٥';
+  const date = new Date(dateStr + 'T00:00:00');
+  const months = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
+                  'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+  const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+  const day = toArabic(date.getDate());
+  const month = months[date.getMonth()];
+  const year = toArabic(date.getFullYear());
+  const dayName = days[date.getDay()];
+  return `${dayName} ${day} ${month} ${year}`;
+}
+
+function formatArabicTime(timeStr) {
+  if (!timeStr) return 'السابعة مساءً';
+  const [hours, minutes] = timeStr.split(':');
+  const h = parseInt(hours);
+  const m = parseInt(minutes);
+  const ampm = h >= 12 ? 'مساءً' : 'صباحاً';
+  const hour12 = h % 12 || 12;
+  return `${toArabic(hour12)}:${toArabic(String(m).padStart(2, '0'))} ${ampm}`;
+}
+
+function toArabic(n) {
+  return String(n).replace(/[0-9]/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+}
+
+// ════════════════════════════════════════
+// MUSIC HANDLING
+// ════════════════════════════════════════
+function handleMusicUpload(file) {
+  if (!file) return;
+  if (!file.type.startsWith('audio/')) {
+    showToast('❌ يرجى اختيار ملف صوتي');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    STATE.musicSrc = e.target.result;
+    document.getElementById('audioPlayer').src = STATE.musicSrc;
+    showToast('✅ تم تحميل الموسيقى');
+    saveToLocalStorage();
+  };
+  reader.readAsDataURL(file);
+}
+
+function updateMusicUrl() {
+  const url = document.getElementById('musicUrl').value.trim();
+  if (url) {
+    STATE.musicSrc = url;
+    document.getElementById('audioPlayer').src = url;
+    saveToLocalStorage();
+  }
+}
+
+// ════════════════════════════════════════
+// LOCAL STORAGE
+// ════════════════════════════════════════
+function saveToLocalStorage() {
+  const data = {
+    template: STATE.template,
+    groomName: STATE.groomName,
+    brideName: STATE.brideName,
+    weddingDate: STATE.weddingDate,
+    weddingTime: STATE.weddingTime,
+    venueName: STATE.venueName,
+    venueAddress: STATE.venueAddress,
+    primaryColor: STATE.primaryColor,
+    textColor: STATE.textColor
+  };
+  localStorage.setItem('weddingDesignerState', JSON.stringify(data));
+}
+
+function loadFromLocalStorage() {
+  const saved = localStorage.getItem('weddingDesignerState');
+  if (saved) {
+    const data = JSON.parse(saved);
+    STATE.template = data.template || 1;
+    STATE.groomName = data.groomName || 'أحمد محمد';
+    STATE.brideName = data.brideName || 'فاطمة أحمد';
+    STATE.weddingDate = data.weddingDate || '';
+    STATE.weddingTime = data.weddingTime || '';
+    STATE.venueName = data.venueName || 'صالة الأحلام الفاخرة';
+    STATE.venueAddress = data.venueAddress || 'الجيزة - مصر';
+    STATE.primaryColor = data.primaryColor || '#C5A059';
+    STATE.textColor = data.textColor || '#2A2010';
+    
+    document.getElementById('groomName').value = STATE.groomName;
+    document.getElementById('brideName').value = STATE.brideName;
+    document.getElementById('weddingDate').value = STATE.weddingDate;
+    document.getElementById('weddingTime').value = STATE.weddingTime;
+    document.getElementById('venueName').value = STATE.venueName;
+    document.getElementById('venueAddress').value = STATE.venueAddress;
+    document.getElementById('primaryColor').value = STATE.primaryColor;
+    document.getElementById('textColor').value = STATE.textColor;
+    
+    if (STATE.template !== 1) {
+      const cards = document.querySelectorAll('.template-card');
+      selectTemplate(STATE.template, cards[STATE.template - 1]);
+    }
+    
+    updatePreview();
+  }
+}
+
+// ════════════════════════════════════════
+// DOWNLOAD & SHARE
+// ════════════════════════════════════════
+function downloadInvitation() {
+  const html = generateHTML();
+  const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `دعوة-${STATE.groomName}-${STATE.brideName}.html`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  showToast('✅ تم تحميل الدعوة');
+}
+
+function shareInvitation() {
+  const text = `🎉 دعوة زفاف ${STATE.groomName} و ${STATE.brideName}\n📅 ${formatArabicDate(STATE.weddingDate)}\n📍 ${STATE.venueName}`;
+  if (navigator.share) {
+    navigator.share({ text });
+  } else {
+    const link = document.location.href;
+    navigator.clipboard.writeText(link);
+    showToast('📋 تم نسخ الرابط');
+  }
+}
+
+function generateHTML() {
+  return `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دعوة الزفاف</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@200;300;400;500;700;800&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; padding: 20px; background: #f0f0f0; font-family: 'Tajawal', sans-serif; }
+    .container { max-width: 500px; margin: 0 auto; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+    .invitation { padding: 40px 30px; text-align: center; min-height: 600px; display: flex; flex-direction: column; justify-content: center; }
+    .title { font-size: 28px; font-family: 'Playfair Display'; font-weight: 700; margin: 20px 0; }
+    .separator { width: 60px; height: 2px; background: #C5A059; margin: 20px auto; }
+    .details { font-size: 14px; line-height: 2; margin-top: 30px; }
+    audio { width: 100%; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="invitation" style="background: ${STATE.template === 1 ? 'linear-gradient(135deg, #f8f4f0 0%, #ede8e0 100%); color: #2A2010;' : STATE.template === 2 ? 'white; color: #1a1a1a;' : STATE.template === 3 ? 'linear-gradient(135deg, #faf5f0 0%, #f5e6d3 100%); color: #6b5a3d;' : STATE.template === 4 ? 'linear-gradient(135deg, #1a1410 0%, #2a2415 100%); color: #f5f1e8;' : 'white; color: #202124;'}">
+        <div style="font-size: 14px; letter-spacing: 0.2em; margin-bottom: 20px; color: ${STATE.primaryColor};">بسم الله الرحمن الرحيم</div>
+        <div class="separator"></div>
+        <div style="font-size: 12px; margin-bottom: 15px;">يتشرف بتقديم</div>
+        <div class="title">${STATE.groomName}</div>
+        <div style="font-size: 32px; color: ${STATE.primaryColor}; font-style: italic; margin: 15px 0;">&</div>
+        <div class="title">${STATE.brideName}</div>
+        <div class="separator" style="margin: 20px auto 25px;"></div>
+        <div class="details">
+          <div>🎉 فرح قرانهما الكريم</div>
+          <div>📅 ${formatArabicDate(STATE.weddingDate)}</div>
+          <div>⏰ الساعة ${formatArabicTime(STATE.weddingTime)}</div>
+          <div>📍 ${STATE.venueName}</div>
+          <div style="font-size: 12px; margin-top: 15px;">${STATE.venueAddress}</div>
+        </div>
+        ${STATE.musicSrc ? `<audio controls src="${STATE.musicSrc}"></audio>` : ''}
+      </div>
+    </div>
+  </div>
+</body>
+</html>`;
+}
+
+// ════════════════════════════════════════
+// TOAST NOTIFICATION
+// ════════════════════════════════════════
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// ════════════════════════════════════════
+// INITIALIZE
+// ════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  loadFromLocalStorage();
+  updatePreview();
+  showToast('🎉 مرحباً بك في مصمّم الدعوات الفاخر');
+});
+</script>
+</body>
+</html>
